@@ -1,0 +1,16 @@
+---
+samba_packages:
+  - samba
+  - samba-common
+  - samba-client
+  - krb5-workstation
+  - krb5-libs
+
+samba_vfs_packages: []
+
+samba_configuration_dir: /etc/samba
+samba_configuration: "{{ samba_configuration_dir }}/smb.conf"
+
+samba_services:
+  - smb
+  - nmb

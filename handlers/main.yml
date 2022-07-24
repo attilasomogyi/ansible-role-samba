@@ -1,2 +1,6 @@
 ---
-# handlers file for template
+- name: Restart Samba services
+  service:
+    name: "{{ item }}"
+    state: restarted
+  with_items: "{{ samba_services }}"

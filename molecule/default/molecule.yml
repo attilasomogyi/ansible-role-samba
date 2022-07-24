@@ -1,0 +1,22 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: RedHat
+    image: fedora:latest
+    pre_build_image: false
+  - name: Debian
+    image: debian:latest
+    pre_build_image: false
+  - name: ArchLinux
+    image: archlinux:latest
+    dockerfile: archlinux-dockerfile
+    pre_build_image: false
+provisioner:
+  name: ansible
+  env:
+    ANSIBLE_VERBOSITY: 0
+verifier:
+  name: ansible
