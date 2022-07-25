@@ -2,10 +2,10 @@
 samba_packages:
   - samba
   - samba-client
-  - winbind
-  - libnss-winbind
-  - krb5-user
-  - alc
+  # - winbind
+  # - libnss-winbind
+  # - krb5-user
+  # - alc
 
 samba_vfs_packages:
   - samba-vfs-modules

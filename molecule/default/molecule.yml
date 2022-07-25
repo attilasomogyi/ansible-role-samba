@@ -4,19 +4,20 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: RedHat
-    image: fedora:latest
-    pre_build_image: false
+  # - name: RedHat
+  #   image: fedora:latest
+  #   pre_build_image: false
   - name: Debian
     image: debian:latest
+    dockerfile: debian-dockerfile
     pre_build_image: false
-  - name: ArchLinux
-    image: archlinux:latest
-    dockerfile: archlinux-dockerfile
-    pre_build_image: false
+  # - name: ArchLinux
+  #   image: archlinux:latest
+  #   dockerfile: archlinux-dockerfile
+  #   pre_build_image: false
 provisioner:
   name: ansible
-  env:
-    ANSIBLE_VERBOSITY: 0
+#  env:
+#    ANSIBLE_VERBOSITY: 3
 verifier:
   name: ansible
